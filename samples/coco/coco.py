@@ -47,6 +47,9 @@ import zipfile
 import urllib.request
 import shutil
 
+import tensorflow as tf
+print(tf.__version__)
+
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../../")
 

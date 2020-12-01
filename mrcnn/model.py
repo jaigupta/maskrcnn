@@ -2157,6 +2157,8 @@ class MaskRCNN(object):
             "mrcnn_class_loss", "mrcnn_bbox_loss", "mrcnn_mask_loss"]
         for name in loss_names:
             layer = self.keras_model.get_layer(name)
+            print('layer', layer)
+            print('self.keras_model.losses', self.keras_model.losses)
             if layer.output in self.keras_model.losses:
                 continue
             loss = (
